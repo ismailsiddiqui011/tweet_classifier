@@ -37,4 +37,11 @@ print(response.text)
 ```console
 curl --location 'http://213.173.105.86:47704/tweet_clf' \
 --header 'Content-Type: application/json' \
---data '{"input_tweet" : "this sony tv is very bad"}'```
+--data '{"input_tweet" : "this sony tv is very bad"}'
+```
+
+### Run Cmd:
+```console
+docker build -t tweet_clf .
+docker run --restart on-failure -d -it -p 1411:1411 -p 8501:8501 --name tweet_clf tweet_clf
+'```
