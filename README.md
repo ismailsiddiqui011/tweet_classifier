@@ -41,7 +41,15 @@ curl --location 'http://213.173.105.86:47704/tweet_clf' \
 ```
 
 ### Run Cmd:
+#### Docker
+
 ```console
 docker build -t tweet_clf .
 docker run --restart on-failure -d -it -p 1411:1411 -p 8501:8501 --name tweet_clf tweet_clf
-'```
+```
+
+#### Using local ENV
+```console
+pip install -r requirements.txt
+sh run.sh
+```
