@@ -13,5 +13,6 @@ COPY . .
 RUN chmod +x run.sh
 
 EXPOSE 1411
+EXPOSE 8501
 
 CMD ["sh", "-c", "./run.sh"]
