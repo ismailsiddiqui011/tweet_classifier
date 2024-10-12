@@ -25,3 +25,5 @@ try:
     st.markdown(f"Product: {response['product']}")
 except:
   pass
+  st.markdown("Emotion: ")
+  st.markdown("Product: ")
