@@ -3,7 +3,7 @@ warnings.filterwarnings('ignore')
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
 # Load fine-tuned T5 tokenizer and model
-model_name = r'./fine_tuned_t5'
+model_name = 'luciferMorningstarOmega/fine_tuned_t5'
 tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 

@@ -5,3 +5,4 @@ accelerate
 uvicorn
 sentencepiece
 streamlit
+hf_transfer
