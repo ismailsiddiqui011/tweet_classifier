@@ -3,6 +3,6 @@ wget https://media.githubusercontent.com/media/ismailsiddiqui011/tweet_classifie
 
 python main.py &
 
-streamlit run .\streamlit.py
+streamlit run streamlit.py
 
 fg %1
