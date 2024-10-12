@@ -3,7 +3,7 @@ warnings.filterwarnings('ignore')
 import time, traceback, json
 from pydantic import BaseModel
 from fastapi import FastAPI, Response
-from utils import predict
+from utils import predict, remove_stopwords
 app = FastAPI()
 
 class Input(BaseModel):
@@ -13,9 +13,9 @@ class Input(BaseModel):
 def generator(input: Input):
     try:
         tot = time.time()
-        twwet = input.input_tweet
-
-        emotion, product = predict(twwet)
+        tweet = input.input_tweet
+        tweet = remove_stopwords(tweet)
+        emotion, product = predict(tweet)
         result = {'emotion' : emotion, 'product' : product}
             
         print('Total Time: ', time.time()-tot)

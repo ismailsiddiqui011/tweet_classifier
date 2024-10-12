@@ -6,3 +6,4 @@ uvicorn
 sentencepiece
 streamlit
 hf_transfer
+spacy
